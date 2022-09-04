@@ -1,0 +1,3 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="mainmenu-icon mainmenu-icon-left" width="18"  height="32" ><defs><symbol id="mainmenu_icon_left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 32">
+    <path d="M0,16c0,.44,.17,.89,.52,1.23l14.48,14.27c.69,.68,1.8,.68,2.49,0s.69-1.77,0-2.45L4.25,16,17.48,2.96c.69-.68,.69-1.77,0-2.45s-1.8-.68-2.49,0L.52,14.77c-.34,.34-.52,.78-.52,1.23Z"></path>
+  </symbol></defs><use xlink:href="#mainmenu_icon_left" fill="#A9A9A9"></use></svg>
