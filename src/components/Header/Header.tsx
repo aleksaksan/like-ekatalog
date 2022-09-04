@@ -1,7 +1,8 @@
 import React from 'react';
-import { SvgLocation } from '../Svg/SvgFuncs/SvgLocation';
-import { SvgLogin } from '../Svg/SvgFuncs/SvgLogin';
-import { SvgLogo } from '../Svg/SvgFuncs/SvgLogo';
+import { SvgLocation } from '../Svg/SvgFuncs/SvgComponents/SvgLocation';
+import { SvgLogin } from '../Svg/SvgFuncs/SvgComponents/SvgLogin';
+import { SvgLogo } from '../Svg/SvgFuncs/SvgComponents/SvgLogo';
+import { CategoriesContainer } from './CategoriesContainer/CategoriesContainer';
 import './Header.scss';
 import { SearchInput } from './SearchInput/SearchInput';
 
@@ -29,7 +30,7 @@ export const Header = () => {
         </div>
       </header>
 
-
+      <CategoriesContainer />
     </>
   )
 };
