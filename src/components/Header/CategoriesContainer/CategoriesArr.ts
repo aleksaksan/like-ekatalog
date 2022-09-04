@@ -1,15 +1,27 @@
 import { CategoriesEnum } from "../../../shared/enums/CategoriesEnum";
 import { SubCategoryEnum } from "../../../shared/enums/SubCategoryEnum";
+import { SvgAuto } from "../../Svg/SvgFuncs/SvgSubmenu/SvgAuto";
+import { SvgBag } from "../../Svg/SvgFuncs/SvgSubmenu/SvgBag";
+import { SvgBike } from "../../Svg/SvgFuncs/SvgSubmenu/SvgBike";
 import { SvgDecor } from "../../Svg/SvgFuncs/SvgSubmenu/SvgDecor";
+import { SvgDresses } from "../../Svg/SvgFuncs/SvgSubmenu/SvgDresses";
 import { SvgFfagrances } from "../../Svg/SvgFuncs/SvgSubmenu/SvgFfagrances";
 import { SvgFurniture } from "../../Svg/SvgFuncs/SvgSubmenu/SvgFurniture";
 import { SvgGoceries } from "../../Svg/SvgFuncs/SvgSubmenu/SvgGoceries";
+import { SvgJew } from "../../Svg/SvgFuncs/SvgSubmenu/SvgJew";
 import { SvgLaptop } from "../../Svg/SvgFuncs/SvgSubmenu/SvgLaptop";
 import { SvgLightning } from "../../Svg/SvgFuncs/SvgSubmenu/SvgLightning";
+import { SvgMShoes } from "../../Svg/SvgFuncs/SvgSubmenu/SvgMShoes";
 import { SvgPhone } from "../../Svg/SvgFuncs/SvgSubmenu/SvgPhone";
+import { SvgShirt } from "../../Svg/SvgFuncs/SvgSubmenu/SvgShirt";
 import { SvgSkincare } from "../../Svg/SvgFuncs/SvgSubmenu/SvgSkincare";
+import { SvgSunglasses } from "../../Svg/SvgFuncs/SvgSubmenu/SvgSunglasses";
+import { SvgTop } from "../../Svg/SvgFuncs/SvgSubmenu/SvgTop";
+import { SvgWhatches } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWhatches";
+import { SvgWShoes } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWShoes";
+import { SvgWWatch } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWWatch";
 
-export const Categories = [
+export const CategoriesArr = [
   {
     id: 1,
     name: CategoriesEnum.Gadget,
@@ -50,16 +62,12 @@ export const Categories = [
   {
     id: 6,
     name: CategoriesEnum.Appliances,
-    subCategories: [
-      SubCategoryEnum
-    ]
+    subCategories: []
   },
   {
     id: 7,
     name: CategoriesEnum.Climat,
-    subCategories: [
-      SubCategoryEnum
-    ]
+    subCategories: []
   },
   {
     id: 8,
@@ -103,53 +111,53 @@ export const Categories = [
     subCategories: [
       {
         id: 0,
-        icon: SvgFfagrances,
-        name: SubCategoryEnum.fragrances,
+        icon: SvgTop,
+        name: SubCategoryEnum.tops,
       },
       {
         id: 1,
-        icon: SvgSkincare,
-        name: SubCategoryEnum.skincare,
+        icon: SvgDresses,
+        name: SubCategoryEnum.womensDresses,
       },
       {
         id: 2,
-        icon: SvgGoceries,
-        name: SubCategoryEnum.groceries,
+        icon: SvgWShoes,
+        name: SubCategoryEnum.womensShoes,
       },
       {
         id: 3,
-        icon: SvgDecor,
-        name: SubCategoryEnum.decoration,
+        icon: SvgShirt,
+        name: SubCategoryEnum.mensShirts,
       },
       {
         id: 4,
-        icon: SvgFurniture,
-        name: SubCategoryEnum.furniture,
+        icon: SvgMShoes,
+        name: SubCategoryEnum.mensShoes,
       },
       {
         id: 5,
-        icon: SvgLightning,
-        name: SubCategoryEnum.lighting,
+        icon: SvgWhatches,
+        name: SubCategoryEnum.mensWatches,
       },
       {
         id: 6,
-        icon: SvgGoceries,
-        name: SubCategoryEnum.groceries,
+        icon: SvgWWatch,
+        name: SubCategoryEnum.womensWatches,
       },
       {
         id: 7,
-        icon: SvgDecor,
-        name: SubCategoryEnum.decoration,
+        icon: SvgBag,
+        name: SubCategoryEnum.womensBags,
       },
       {
         id: 8,
-        icon: SvgFurniture,
-        name: SubCategoryEnum.furniture,
+        icon: SvgJew,
+        name: SubCategoryEnum.womensJewellery,
       },
       {
         id: 9,
-        icon: SvgLightning,
-        name: SubCategoryEnum.lighting,
+        icon: SvgSunglasses,
+        name: SubCategoryEnum.sunglasses,
       },
     ]
   },
@@ -157,35 +165,36 @@ export const Categories = [
     id: 10,
     name: CategoriesEnum.Auto,
     subCategories: [
-      SubCategoryEnum
+      {
+        id: 0,
+        icon: SvgAuto,
+        name: SubCategoryEnum.automotive
+      },
+      {
+        id: 1,
+        icon: SvgBike,
+        name: SubCategoryEnum.motorcycle
+      },
     ]
   },
   {
     id: 11,
     name: CategoriesEnum.Tool,
-    subCategories: [
-      SubCategoryEnum
-    ]
+    subCategories: []
   },
   {
     id: 12,
     name: CategoriesEnum.Tourism,
-    subCategories: [
-      SubCategoryEnum
-    ]
+    subCategories: []
   },
   {
     id: 13,
     name: CategoriesEnum.Sport,
-    subCategories: [
-      SubCategoryEnum
-    ]
+    subCategories: []
   },
   {
     id: 14,
     name: CategoriesEnum.Whatches,
-    subCategories: [
-      SubCategoryEnum
-    ]
+    subCategories: []
   },
 ];
