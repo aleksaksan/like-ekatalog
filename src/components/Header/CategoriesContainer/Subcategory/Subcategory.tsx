@@ -1,19 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Subcategory.scss';
 
+export type SubcategoryProps = {
+  id: number,
+  icon: JSX.Element,
+  name: string,
+}
 
-// {
-//         id: 1,
-//         icon: SvgPhone,
-//         name: SubCategoryEnum.smartphones,
-//       },
-
-export const Subcategory = () => {
+export const Subcategory = (props: SubcategoryProps) => {
   return (
     <Link
-      className="subcategory-item"
-      to={''}>
-
+      to={'item'}
+      key={props.id}
+      >
+      <div className="subcategory-item">
+        {props.icon}
+        {props.name}
+      </div>
     </Link> 
   )
 }

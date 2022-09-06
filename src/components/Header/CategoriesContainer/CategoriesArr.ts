@@ -21,21 +21,21 @@ import { SvgWhatches } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWhatches";
 import { SvgWShoes } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWShoes";
 import { SvgWWatch } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWWatch";
 
-export type subCategory = {
+export type SubCategory = {
   id: number,
   icon: JSX.Element,
   name: SubCategoryEnum,
 }
 
-export type category = {
+export type Category = {
   id: number,
   name: CategoriesEnum,
-  subCategories: subCategory[],
+  subCategories: SubCategory[],
 }
 
-export const categoriesArr: category[] = [
+export const categoriesArr: Category[] = [
   {
-    id: 1,
+    id: 0,
     name: CategoriesEnum.Gadget,
     subCategories: [
       {
@@ -46,7 +46,7 @@ export const categoriesArr: category[] = [
     ]
   },
   {
-    id: 2,
+    id: 1,
     name: CategoriesEnum.Computer,
     subCategories: [
       {
@@ -57,32 +57,32 @@ export const categoriesArr: category[] = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     name: CategoriesEnum.Photo,
     subCategories: []
   },
   {
-    id: 4,
+    id: 3,
     name: CategoriesEnum.TV,
     subCategories: []
   },
   {
-    id: 5,
+    id: 4,
     name: CategoriesEnum.Audio,
     subCategories: []
   },
   {
-    id: 6,
+    id: 5,
     name: CategoriesEnum.Appliances,
     subCategories: []
   },
   {
-    id: 7,
+    id: 6,
     name: CategoriesEnum.Climat,
     subCategories: []
   },
   {
-    id: 8,
+    id: 7,
     name: CategoriesEnum.House,
     subCategories: [
       {
@@ -118,7 +118,7 @@ export const categoriesArr: category[] = [
     ]
   },
   {
-    id: 9,
+    id: 8,
     name: CategoriesEnum.Dresses,
     subCategories: [
       {
@@ -174,7 +174,7 @@ export const categoriesArr: category[] = [
     ]
   },
   {
-    id: 10,
+    id: 9,
     name: CategoriesEnum.Auto,
     subCategories: [
       {
@@ -190,22 +190,22 @@ export const categoriesArr: category[] = [
     ]
   },
   {
-    id: 11,
+    id: 10,
     name: CategoriesEnum.Tool,
     subCategories: []
   },
   {
-    id: 12,
+    id: 11,
     name: CategoriesEnum.Tourism,
     subCategories: []
   },
   {
-    id: 13,
+    id: 12,
     name: CategoriesEnum.Sport,
     subCategories: []
   },
   {
-    id: 14,
+    id: 13,
     name: CategoriesEnum.Whatches,
     subCategories: []
   },

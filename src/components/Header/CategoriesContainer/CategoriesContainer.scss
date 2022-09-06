@@ -1,34 +1,31 @@
 .categories-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   cursor: pointer;
   font-size: 14px;
   color: grey;
-  padding: 22px 0;
+  overflow: hidden;
   min-width: 926px;
 
   .category-item {
     cursor: pointer;
     position: relative;
     white-space: nowrap;
+    padding: 22px 0;
+    list-style: none;
+  }
+
+  .category-item:hover {
+    border-bottom: 3px solid #ff8d02;
+    color: #ff8d02;
   }
 }
 
+.subcategories-container {
+  display: flex;
 
-.subcategory-item {
-  outline: 0;
-  font-size: 13px;
-  line-height: 1.2;
-  color: grey;
-  text-decoration: none;
-  position: relative;
-  flex-direction: column;
-  width: 130px;
-  height: 110px;
-  padding: 21px 15px 15px;
-  text-align: center;
-  vertical-align: top;
-  white-space: normal;
+  &>a {
+    text-decoration: none;
+  }
 }
