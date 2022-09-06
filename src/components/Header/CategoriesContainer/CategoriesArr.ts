@@ -21,14 +21,26 @@ import { SvgWhatches } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWhatches";
 import { SvgWShoes } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWShoes";
 import { SvgWWatch } from "../../Svg/SvgFuncs/SvgSubmenu/SvgWWatch";
 
-export const CategoriesArr = [
+export type subCategory = {
+  id: number,
+  icon: JSX.Element,
+  name: SubCategoryEnum,
+}
+
+export type category = {
+  id: number,
+  name: CategoriesEnum,
+  subCategories: subCategory[],
+}
+
+export const categoriesArr: category[] = [
   {
     id: 1,
     name: CategoriesEnum.Gadget,
     subCategories: [
       {
         id: 1,
-        icon: SvgPhone,
+        icon: SvgPhone(),
         name: SubCategoryEnum.smartphones,
       },
     ]
@@ -39,7 +51,7 @@ export const CategoriesArr = [
     subCategories: [
       {
         id: 1,
-        icon: SvgLaptop,
+        icon: SvgLaptop(),
         name: SubCategoryEnum.laptops,
       },
     ]
@@ -75,32 +87,32 @@ export const CategoriesArr = [
     subCategories: [
       {
         id: 0,
-        icon: SvgFfagrances,
+        icon: SvgFfagrances(),
         name: SubCategoryEnum.fragrances,
       },
       {
         id: 1,
-        icon: SvgSkincare,
+        icon: SvgSkincare(),
         name: SubCategoryEnum.skincare,
       },
       {
         id: 2,
-        icon: SvgGoceries,
+        icon: SvgGoceries(),
         name: SubCategoryEnum.groceries,
       },
       {
         id: 3,
-        icon: SvgDecor,
+        icon: SvgDecor(),
         name: SubCategoryEnum.decoration,
       },
       {
         id: 4,
-        icon: SvgFurniture,
+        icon: SvgFurniture(),
         name: SubCategoryEnum.furniture,
       },
       {
         id: 5,
-        icon: SvgLightning,
+        icon: SvgLightning(),
         name: SubCategoryEnum.lighting,
       },
     ]
@@ -111,52 +123,52 @@ export const CategoriesArr = [
     subCategories: [
       {
         id: 0,
-        icon: SvgTop,
+        icon: SvgTop(),
         name: SubCategoryEnum.tops,
       },
       {
         id: 1,
-        icon: SvgDresses,
+        icon: SvgDresses(),
         name: SubCategoryEnum.womensDresses,
       },
       {
         id: 2,
-        icon: SvgWShoes,
+        icon: SvgWShoes(),
         name: SubCategoryEnum.womensShoes,
       },
       {
         id: 3,
-        icon: SvgShirt,
+        icon: SvgShirt(),
         name: SubCategoryEnum.mensShirts,
       },
       {
         id: 4,
-        icon: SvgMShoes,
+        icon: SvgMShoes(),
         name: SubCategoryEnum.mensShoes,
       },
       {
         id: 5,
-        icon: SvgWhatches,
+        icon: SvgWhatches(),
         name: SubCategoryEnum.mensWatches,
       },
       {
         id: 6,
-        icon: SvgWWatch,
+        icon: SvgWWatch(),
         name: SubCategoryEnum.womensWatches,
       },
       {
         id: 7,
-        icon: SvgBag,
+        icon: SvgBag(),
         name: SubCategoryEnum.womensBags,
       },
       {
         id: 8,
-        icon: SvgJew,
+        icon: SvgJew(),
         name: SubCategoryEnum.womensJewellery,
       },
       {
         id: 9,
-        icon: SvgSunglasses,
+        icon: SvgSunglasses(),
         name: SubCategoryEnum.sunglasses,
       },
     ]
@@ -167,12 +179,12 @@ export const CategoriesArr = [
     subCategories: [
       {
         id: 0,
-        icon: SvgAuto,
+        icon: SvgAuto(),
         name: SubCategoryEnum.automotive
       },
       {
         id: 1,
-        icon: SvgBike,
+        icon: SvgBike(),
         name: SubCategoryEnum.motorcycle
       },
     ]
