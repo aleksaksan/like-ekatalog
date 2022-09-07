@@ -4,11 +4,11 @@ import "./CategoriesContainer.scss";
 import { Subcategory } from './Subcategory/Subcategory';
 
 export const CategoriesContainer = () => {
-  const [isHovered, setIsHovered] = useState<boolean>(true);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
   const [hoveredCategory, setHoveredCategory] = useState<number>(14);
 
   return (
-    <div className="category-wrapper" onMouseLeave={()=>
+    <div onMouseLeave={()=>
       {setIsHovered(false); 
       setHoveredCategory(14);
     }}>

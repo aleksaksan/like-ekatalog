@@ -12,7 +12,7 @@ export const Subcategory = (props: SubcategoryProps) => {
   return (
     <Link 
       className="sub-categ-link"
-      to={'item'}
+      to={'catalog'}
       key={props.id}
       >
       <div className="subcategory-item">

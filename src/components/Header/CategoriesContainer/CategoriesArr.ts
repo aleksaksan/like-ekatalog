@@ -25,6 +25,7 @@ export type SubCategory = {
   id: number,
   icon: JSX.Element,
   name: SubCategoryEnum,
+  alias: string,
 }
 
 export type Category = {
@@ -42,6 +43,7 @@ export const categoriesArr: Category[] = [
         id: 1,
         icon: SvgPhone(),
         name: SubCategoryEnum.smartphones,
+        alias: "smartphones",
       },
     ]
   },
@@ -53,6 +55,7 @@ export const categoriesArr: Category[] = [
         id: 1,
         icon: SvgLaptop(),
         name: SubCategoryEnum.laptops,
+        alias: "laptops",
       },
     ]
   },
@@ -89,31 +92,37 @@ export const categoriesArr: Category[] = [
         id: 0,
         icon: SvgFfagrances(),
         name: SubCategoryEnum.fragrances,
+        alias: "fragrances",
       },
       {
         id: 1,
         icon: SvgSkincare(),
         name: SubCategoryEnum.skincare,
+        alias: "skincare",
       },
       {
         id: 2,
         icon: SvgGoceries(),
         name: SubCategoryEnum.groceries,
+        alias: "groceries",
       },
       {
         id: 3,
         icon: SvgDecor(),
         name: SubCategoryEnum.decoration,
+        alias: "decoration",
       },
       {
         id: 4,
         icon: SvgFurniture(),
         name: SubCategoryEnum.furniture,
+        alias: "furniture",
       },
       {
         id: 5,
         icon: SvgLightning(),
         name: SubCategoryEnum.lighting,
+        alias: "lighting",
       },
     ]
   },
@@ -125,51 +134,61 @@ export const categoriesArr: Category[] = [
         id: 0,
         icon: SvgTop(),
         name: SubCategoryEnum.tops,
+        alias: "tops",
       },
       {
         id: 1,
         icon: SvgDresses(),
         name: SubCategoryEnum.womensDresses,
+        alias: "womens-dresses",
       },
       {
         id: 2,
         icon: SvgWShoes(),
         name: SubCategoryEnum.womensShoes,
+        alias: "womens-shoes",
       },
       {
         id: 3,
         icon: SvgShirt(),
         name: SubCategoryEnum.mensShirts,
+        alias: "mens-shirts",
       },
       {
         id: 4,
         icon: SvgMShoes(),
         name: SubCategoryEnum.mensShoes,
+        alias: "mens-shoes",
       },
       {
         id: 5,
         icon: SvgWhatches(),
         name: SubCategoryEnum.mensWatches,
+        alias: "mens-watches",
       },
       {
         id: 6,
         icon: SvgWWatch(),
         name: SubCategoryEnum.womensWatches,
+        alias: "womens-watches",
       },
       {
         id: 7,
         icon: SvgBag(),
         name: SubCategoryEnum.womensBags,
+        alias: "womens-bags",
       },
       {
         id: 8,
         icon: SvgJew(),
         name: SubCategoryEnum.womensJewellery,
+        alias: "womens-jewellery",
       },
       {
         id: 9,
         icon: SvgSunglasses(),
         name: SubCategoryEnum.sunglasses,
+        alias: "sunglasses",
       },
     ]
   },
@@ -180,12 +199,14 @@ export const categoriesArr: Category[] = [
       {
         id: 0,
         icon: SvgAuto(),
-        name: SubCategoryEnum.automotive
+        name: SubCategoryEnum.automotive,
+        alias: "automotive",
       },
       {
         id: 1,
         icon: SvgBike(),
-        name: SubCategoryEnum.motorcycle
+        name: SubCategoryEnum.motorcycle,
+        alias: "motorcycle",
       },
     ]
   },
