@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { CatalogPage } from '../../pages/CatalogPage/CatalogPage';
 import { ItemPage } from '../../pages/ItemPage/ItemPage';
-import { HomePage } from '../../pages/MainPage/HomePage';
+import { HomePage } from '../../pages/HomePage/HomePage';
 import { NotFoundPage } from '../../pages/NotFoundPage/NotFoundPage';
 
 export const AppRouter = () => {

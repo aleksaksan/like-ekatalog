@@ -20,13 +20,12 @@ header {
     display: flex;
     height: 60px;
 
-    &>svg {
+    a>svg {
       width: 194px;
       height: 60px;
       margin-top: -20px;
     }
   }
-
 }
 
 .headers-actions-container {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SvgLocation } from '../Svg/SvgFuncs/SvgComponents/SvgLocation';
 import { SvgLogin } from '../Svg/SvgFuncs/SvgComponents/SvgLogin';
 import { SvgLogo } from '../Svg/SvgFuncs/SvgComponents/SvgLogo';
@@ -14,7 +15,9 @@ export const Header = () => {
       </div>
       <header>
         <div className="m-width">
-          <SvgLogo />
+          <Link to={"/"}>
+            <SvgLogo />
+          </Link>
           <SearchInput />
 
           <div className="headers-actions-container">
