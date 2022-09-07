@@ -1,11 +1,13 @@
 import React from 'react';
+import { AppRouter } from './components/assets/AppRouter';
+import { Header } from './components/Header/Header';
+import './App.scss';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello there!</h1>
-      </header>
+      <Header />
+      <AppRouter/>
     </div>
   );
 }

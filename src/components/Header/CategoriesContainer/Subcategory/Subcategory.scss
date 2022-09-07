@@ -1,0 +1,27 @@
+@import '../../../../styles/colors.scss';
+
+.subcategory-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  outline: 0;
+  font-size: 13px;
+  color: grey;
+  text-align: center;
+  width: 130px;
+  padding: 21px 15px 15px;
+
+  &>svg {
+    max-width: 24px;
+    max-height: 32px;
+    fill: $common-blue;
+  }
+}
+
+.sub-categ-link:hover {
+  .subcategory-item {
+    &>svg {
+      fill: $primary-orange;
+    }
+  }
+}
