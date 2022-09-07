@@ -209,4 +209,9 @@ export const categoriesArr: Category[] = [
     name: CategoriesEnum.Whatches,
     subCategories: []
   },
+  {
+    id: 14,
+    name: CategoriesEnum.Stub,
+    subCategories: []
+  }
 ];

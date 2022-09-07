@@ -1,3 +1,5 @@
+@import '../../../styles/colors';
+
 .categories-container {
   display: flex;
   justify-content: space-between;
@@ -7,6 +9,7 @@
   color: grey;
   overflow: hidden;
   min-width: 926px;
+  z-index: 1;
 
   .category-item {
     cursor: pointer;
@@ -14,18 +17,43 @@
     white-space: nowrap;
     padding: 22px 0;
     list-style: none;
+    border-bottom: 3px solid white;
   }
 
-  .category-item:hover {
-    border-bottom: 3px solid #ff8d02;
-    color: #ff8d02;
+  .category-item.hovered {
+    border-bottom: 3px solid $primary-orange;
+    color: $primary-orange;
+  }
+
+  .category-item.empty {
+    opacity: 30%;
   }
 }
 
 .subcategories-container {
   display: flex;
+  align-items: baseline;
+  height: 110px;
+  position: relative;
+  background-color: white;
 
   &>a {
     text-decoration: none;
   }
+}
+
+.subcategories-wrapper {
+  width: 100%;
+  position: absolute;
+  box-shadow: 0 7px 13px rgb(0 0 0 / 20%);
+  overflow: hidden;
+  transition: height ease-in 2s;
+}
+
+.category-wrapper {
+  position: relative;
+}
+
+.subcategories-wrapper.hidden {
+  height: 0;
 }

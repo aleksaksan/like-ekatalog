@@ -10,7 +10,8 @@ export type SubcategoryProps = {
 
 export const Subcategory = (props: SubcategoryProps) => {
   return (
-    <Link
+    <Link 
+      className="sub-categ-link"
       to={'item'}
       key={props.id}
       >

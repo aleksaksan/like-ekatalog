@@ -13,4 +13,5 @@ export enum CategoriesEnum {
   Tourism = "Туризм",
   Sport = "Спорт",
   Whatches = "Часы и украшения",
+  Stub = ""
 };

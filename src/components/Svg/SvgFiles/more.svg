@@ -2,4 +2,4 @@
     <ellipse cx="28.53" cy="3.5" rx="3.47" ry="3.5"></ellipse>
     <path d="M16,0c-1.92,0-3.47,1.57-3.47,3.5s1.55,3.5,3.47,3.5,3.47-1.57,3.47-3.5-1.55-3.5-3.47-3.5Z"></path>
     <ellipse cx="3.47" cy="3.5" rx="3.47" ry="3.5"></ellipse>
-  </symbol></defs><use xlink:href="#mainmenu_icon_more" fill="#2C509A"></use></svg>
+  </symbol></defs><use xlink:href="#mainmenu_icon_more"></use></svg>
