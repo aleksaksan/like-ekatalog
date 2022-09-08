@@ -1,0 +1,101 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.flexible-slider-container {
+  padding: 0;
+  position: relative;
+}
+
+.flexible-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliders-window {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-container {
+  position: relative;
+  display: flex;
+  transition: transform ease-in-out 0.4s;
+}
+
+.fxs-btn {
+  z-index: 10;
+  cursor: pointer;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+.fxs-arrow {
+  position: absolute;
+  top: 50%;
+}
+
+.fxs-arrow.default {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 1em;
+  opacity: 0.6;
+}
+
+.fxs-arrow.default:hover:not(.disabled) {
+  opacity: 0.8;
+}
+
+.left-fxs-arrow.default {
+  transform: rotate(135deg);
+  margin-left: 10px;
+  left: -40px;
+}
+
+.right-fxs-arrow.default {
+  transform: rotate(-45deg);
+  margin-right: 10px;
+  right: -40px;
+}
+
+.left-fxs-arrow.custom {
+  transform: rotate(180deg);
+}
+
+.fxs-arrow.disabled {
+  cursor: default;
+  opacity: 0.2;
+}
+
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.dot {
+  width: 1em;
+  height: 1em;
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: 0.6;
+  background-color: #0000004a;
+}
+
+.dot:hover {
+  opacity: 0.8;
+}
+
+.dot.active {
+  background-color: #000000e0;
+}
+
+.dot+.dot {
+  margin-left: 1em;
+}

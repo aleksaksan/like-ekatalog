@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 .m-width {
@@ -9,4 +10,9 @@
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
 }
