@@ -1,7 +1,10 @@
 import React from 'react';
 import './HomePage.scss';
-import { CategoriesGrid } from '../../components/CategoriesGrid/CategoriesGrid';
+import { CategoriesGrid1 } from '../../components/CategoriesGrids/CategoriesGrid1';
 import { FlexibleSlider } from '../../components/FlexibleSlider/FlexibleSlider';
+import { CategoriesGrid4 } from '../../components/CategoriesGrids/CategoriesGrid4';
+import { CategoriesGrid3 } from '../../components/CategoriesGrids/CategoriesGrid3';
+import { CategoriesGrid2 } from '../../components/CategoriesGrids/CategoriesGrid2';
 
 export const HomePage = () => {
   return (
@@ -10,10 +13,10 @@ export const HomePage = () => {
       <FlexibleSlider
         isHaveDots={true}
       >
-        <CategoriesGrid />
-        <CategoriesGrid />
-        <CategoriesGrid />
-        <CategoriesGrid />
+        <CategoriesGrid1 />
+        <CategoriesGrid2 />
+        <CategoriesGrid3 />
+        <CategoriesGrid4 />
       </FlexibleSlider>
     </div>
   );
