@@ -35,8 +35,14 @@ export type Category = {
 }
 
 export const categoriesArr: Category[] = [
+  
   {
     id: 0,
+    name: CategoriesEnum.Stub,
+    subCategories: []
+  },
+  {
+    id: 1,
     name: CategoriesEnum.Gadget,
     subCategories: [
       {
@@ -48,7 +54,7 @@ export const categoriesArr: Category[] = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     name: CategoriesEnum.Computer,
     subCategories: [
       {
@@ -60,32 +66,32 @@ export const categoriesArr: Category[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: CategoriesEnum.Photo,
     subCategories: []
   },
   {
-    id: 3,
+    id: 4,
     name: CategoriesEnum.TV,
     subCategories: []
   },
   {
-    id: 4,
+    id: 5,
     name: CategoriesEnum.Audio,
     subCategories: []
   },
   {
-    id: 5,
+    id: 6,
     name: CategoriesEnum.Appliances,
     subCategories: []
   },
   {
-    id: 6,
+    id: 7,
     name: CategoriesEnum.Climat,
     subCategories: []
   },
   {
-    id: 7,
+    id: 8,
     name: CategoriesEnum.House,
     subCategories: [
       {
@@ -127,7 +133,7 @@ export const categoriesArr: Category[] = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     name: CategoriesEnum.Dresses,
     subCategories: [
       {
@@ -160,6 +166,45 @@ export const categoriesArr: Category[] = [
         name: SubCategoryEnum.mensShoes,
         alias: "mens-shoes",
       },
+    ]
+  },
+  {
+    id: 10,
+    name: CategoriesEnum.Auto,
+    subCategories: [
+      {
+        id: 0,
+        icon: SvgAuto(),
+        name: SubCategoryEnum.automotive,
+        alias: "automotive",
+      },
+      {
+        id: 1,
+        icon: SvgBike(),
+        name: SubCategoryEnum.motorcycle,
+        alias: "motorcycle",
+      },
+    ]
+  },
+  {
+    id: 11,
+    name: CategoriesEnum.Tool,
+    subCategories: []
+  },
+  {
+    id: 12,
+    name: CategoriesEnum.Tourism,
+    subCategories: []
+  },
+  {
+    id: 13,
+    name: CategoriesEnum.Sport,
+    subCategories: []
+  },
+  {
+    id: 14,
+    name: CategoriesEnum.Whatches,
+    subCategories: [
       {
         id: 5,
         icon: SvgWhatches(),
@@ -192,47 +237,4 @@ export const categoriesArr: Category[] = [
       },
     ]
   },
-  {
-    id: 9,
-    name: CategoriesEnum.Auto,
-    subCategories: [
-      {
-        id: 0,
-        icon: SvgAuto(),
-        name: SubCategoryEnum.automotive,
-        alias: "automotive",
-      },
-      {
-        id: 1,
-        icon: SvgBike(),
-        name: SubCategoryEnum.motorcycle,
-        alias: "motorcycle",
-      },
-    ]
-  },
-  {
-    id: 10,
-    name: CategoriesEnum.Tool,
-    subCategories: []
-  },
-  {
-    id: 11,
-    name: CategoriesEnum.Tourism,
-    subCategories: []
-  },
-  {
-    id: 12,
-    name: CategoriesEnum.Sport,
-    subCategories: []
-  },
-  {
-    id: 13,
-    name: CategoriesEnum.Whatches,
-    subCategories: []
-  },
-  {
-    id: 14,
-    name: CategoriesEnum.Stub,
-    subCategories: []
-  }
 ];
