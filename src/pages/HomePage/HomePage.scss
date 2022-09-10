@@ -1,0 +1,35 @@
+@import '../../styles/colors.scss';
+
+.right-fxs-arrow.custom {
+  right: -120px;
+}
+.left-fxs-arrow.custom {
+  left: -120px;
+}
+
+.fxs-arrow.custom {
+  top: 40%;
+  fill: #dcdcdc;
+}
+
+.fxs-arrow:hover {
+  fill: $common-blue;
+}
+
+.custom-dot {
+  background-color: #dbdbdb;
+  cursor: pointer;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+.custom-dot:hover {
+  background-color: gray
+}
+
+.active>.custom-dot{
+  background-color: $common-blue;
+}

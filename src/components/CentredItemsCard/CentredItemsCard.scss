@@ -1,0 +1,24 @@
+@import '../../styles/colors.scss';
+
+.centred-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 200px;
+  height: 290px;
+
+  .text-blue {
+    color: $common-blue;
+    font-size: 1.8rem;
+    margin: 20px 0;
+  }
+  .text-blue:hover {
+    color: $primary-orange;
+  }
+
+  .text-gold {
+    color: $primary-orange;
+    font-size: 1.8rem;
+  }
+}
