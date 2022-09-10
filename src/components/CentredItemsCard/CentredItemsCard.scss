@@ -7,11 +7,18 @@
   text-decoration: none;
   width: 200px;
   height: 290px;
+  font-weight: 600;
+
+  &>img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
 
   .text-blue {
     color: $common-blue;
     font-size: 1.8rem;
-    margin: 20px 0;
+    margin: 20px 0 8px 0;
   }
   .text-blue:hover {
     color: $primary-orange;
