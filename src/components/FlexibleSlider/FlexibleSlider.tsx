@@ -31,17 +31,25 @@ export const FlexibleSlider = (props: FlexSliderProps) => {
   const [isDotsBtnsNotVisible, setIsDotsBtnsNotVisible] = useState(props.isDotsButtonsOnHover? true : false);
 
   useEffect(() => {
+    let countItemsInSingleSlide = 1;
     if (ref.current) {
       setContentWidth(ref.current.children[0].children[0].clientWidth);
-      if (props.isByContent)
+      if (props.isByContent) {
         setWindowsWidth(ref.current.children[0].clientWidth);
-      else
+      }
+      else {
         setWindowsWidth(ref.current.clientWidth);
+        countItemsInSingleSlide = Math.trunc(windowsWidth/contentWidth);
+      }
     };
-    let countItemsInSingleSlide = Math.trunc(windowsWidth/contentWidth);
-    setStepWidth(countItemsInSingleSlide*contentWidth);
+    // setStepWidth(countItemsInSingleSlide*contentWidth);
+    setStepWidth(100);
     setMaxOffset(contentWidth*slides.length-windowsWidth);
     setDotsCount(Math.ceil(slides.length/countItemsInSingleSlide));
+    console.log("stepWidth", stepWidth);
+    console.log("contentWidth", contentWidth);
+    console.log("countItemsInSingleSlide", countItemsInSingleSlide);
+
   },[slides, contentWidth, windowsWidth, slides.length, stepWidth, dotsCount, props.isByContent]);
 
   useEffect(() => {
@@ -129,7 +137,7 @@ export const FlexibleSlider = (props: FlexSliderProps) => {
         <div className="sliders-window"
           style={props.isByContent?{width: `${windowsWidth}px`}:{}}
         >
-          <div ref={ref} className="slides-container" style={{transform: `translateX(${offset}px)`}}>
+          <div ref={ref} className="slides-container" style={{transform: `translateX(${offset}%)`}}>
             {slides.map((slide, index) => (
               <div className="slide-item" key={index}>{slide}</div>))
             }
