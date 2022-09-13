@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './HomePage.scss';
 import { CategoriesGrid1 } from '../../components/CategoriesGrids/CategoriesGrid1';
 import { FlexibleSlider } from '../../components/FlexibleSlider/FlexibleSlider';
@@ -7,8 +7,29 @@ import { CategoriesGrid3 } from '../../components/CategoriesGrids/CategoriesGrid
 import { CategoriesGrid2 } from '../../components/CategoriesGrids/CategoriesGrid2';
 import { SvgRightArrow } from '../../components/Svg/SvgFuncs/SvgComponents/SvgRightArrow';
 import { CentredItemsCard } from '../../components/CentredItemsCard/CentredItemsCard';
+import axios from 'axios';
 
 export const HomePage = () => {
+useEffect(()=> {
+  getData();
+}, []);
+
+const getData = async () => {
+  try {
+    const response = await axios(
+    {
+      method: 'get',
+      baseURL: 'https://dummyjson.com/',
+      url: 'products/1',
+      responseType: 'json'
+    });
+    console.log(response.data);
+  } catch (err) {
+    console.error(err);
+  }
+  
+};
+
   return (
     <div className="m-width">
       <h1>Home</h1>
