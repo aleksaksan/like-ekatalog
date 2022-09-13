@@ -5,12 +5,12 @@ import { Subcategory } from './Subcategory/Subcategory';
 
 export const CategoriesContainer = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [hoveredCategory, setHoveredCategory] = useState<number>(14);
+  const [hoveredCategory, setHoveredCategory] = useState<number>(0);
 
   return (
     <div onMouseLeave={()=>
       {setIsHovered(false); 
-      setHoveredCategory(14);
+      setHoveredCategory(0);
     }}>
       <ul className="categories-container m-width" onMouseOver={()=>setIsHovered(true)}>
         {categoriesArr.map((category)=>(
