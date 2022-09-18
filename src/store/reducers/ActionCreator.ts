@@ -34,21 +34,26 @@ import { categorySlice } from "./CategorySlice";
 
 export const fetchCategories = createAsyncThunk(
   'category/fetchCategories',
-  async () => {
-    const response = await axios(
-    {
-      method: 'get',
-      baseURL: 'https://dummyjson.com/',
-      url: 'products/categories',
-      responseType: 'json',
-    });
-    const categories: ICategory[] = response.data.map((item: string, index: number) => {
-        const categoryItem: ICategory = {
-          id: index,
-          name: item
-        };
-        return categoryItem;
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios(
+      {
+        method: 'get',
+        baseURL: 'https://dummyjson.com/',
+        url: 'products/categories',
+        responseType: 'json',
       });
-      return categories;
+      const categories: ICategory[] = response.data.map((item: string, index: number) => {
+          const categoryItem: ICategory = {
+            id: index,
+            name: item
+          };
+          return categoryItem;
+        });
+        return categories;
+
+    } catch (error) {
+      return thunkAPI.rejectWithValue(`Не удалось загрузить список категорий!\nError: ${(error as AxiosError).message}`);
+    }
   }
 );
