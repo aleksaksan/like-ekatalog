@@ -20,19 +20,33 @@ export const categorySlice = createSlice({
   reducers: {
     // without thunks
     //
-    categoryFetching(state) {
+    // categoryFetching(state) {
+    //   state.isLoading = true;
+    // },
+    // categoryFetchingSuccess(state, actions: PayloadAction<ICategory[]>) {
+    //   state.isLoading = false;
+    //   state.error = undefined;
+    //   state.categories = actions.payload;
+    // },
+    // categoryFetchingError(state, actions: PayloadAction<string>) {
+    //   state.isLoading = false;
+    //   state.error = actions.payload;
+    // },
+  },
+  extraReducers: {
+    [fetchCategories.pending.type]: (state) => {
       state.isLoading = true;
     },
-    categoryFetchingSuccess(state, actions: PayloadAction<ICategory[]>) {
+    [fetchCategories.fulfilled.type]: (state, actions: PayloadAction<ICategory[]>) => {
       state.isLoading = false;
       state.error = undefined;
       state.categories = actions.payload;
     },
-    categoryFetchingError(state, actions: PayloadAction<string>) {
+    [fetchCategories.rejected.type]: (state, actions: PayloadAction<string>) => {
       state.isLoading = false;
       state.error = actions.payload;
     },
-  },
+  }
 });
 
 export default categorySlice.reducer;

@@ -54,6 +54,7 @@ useEffect(()=> {
       </FlexibleSlider>
       <h2>Популярное</h2>
       <CentredItemsCard imageSrc='https://dummyjson.com/image/i/products/2/thumbnail.jpg' name='iphone' price='1000$' />
+      <div>{categories.map(item=>item.name)}</div>
       <h1>{error}</h1>
       {isLoading && <h1>LOADING...</h1>}
     </div>
