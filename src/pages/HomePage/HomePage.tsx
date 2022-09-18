@@ -8,29 +8,37 @@ import { CategoriesGrid2 } from '../../components/CategoriesGrids/CategoriesGrid
 import { SvgRightArrow } from '../../components/Svg/SvgFuncs/SvgComponents/SvgRightArrow';
 import { CentredItemsCard } from '../../components/CentredItemsCard/CentredItemsCard';
 import axios from 'axios';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { fetchCategories } from '../../store/reducers/ActionCreator';
 
 export const HomePage = () => {
+const {isLoading, categories, error} = useAppSelector(state => state.categoryReducer);
+const dispatch = useAppDispatch();
+
 useEffect(()=> {
-  getData();
+  // getData();
+  dispatch(fetchCategories());
 }, []);
 
-const getData = async () => {
-  try {
-    const response = await axios(
-    {
-      method: 'get',
-      baseURL: 'https://dummyjson.com/',
-      url: 'products/1',
-      responseType: 'json'
-    });
-    console.log(response.data);
-  } catch (err) {
-    console.error(err);
-  }
+
+// const getData = async () => {
+//   try {
+//     const response = await axios(
+//     {
+//       method: 'get',
+//       baseURL: 'https://dummyjson.com/',
+//       url: 'products/1',
+//       responseType: 'json'
+//     });
+//     console.log(response.data);
+//   } catch (err) {
+//     console.error(err);
+//   }
   
-};
+// };
 
   return (
+    
     <div className="m-width">
       <h1>Home</h1>
       <FlexibleSlider
@@ -46,6 +54,8 @@ const getData = async () => {
       </FlexibleSlider>
       <h2>Популярное</h2>
       <CentredItemsCard imageSrc='https://dummyjson.com/image/i/products/2/thumbnail.jpg' name='iphone' price='1000$' />
+      <h1>{error}</h1>
+      {isLoading && <h1>LOADING...</h1>}
     </div>
   );
 };
