@@ -1,0 +1,41 @@
+@import '../../styles/colors';
+
+.dropdown-wrapper {
+  line-height: 20px;
+  font-size: 13px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  width: 196px;
+  border: 1px solid #bbb;
+}
+
+.dropdown-selected-item {
+  color: #555;
+  padding: 3px 10px 5px;
+}
+
+.dropdown-selected-item:hover {
+  color: $primary-orange;
+}
+
+.dropdown-options-container:not(.zero-height) {
+  list-style-type: none;
+  border-top: 1px solid #bbb;
+}
+
+.zero-height {
+  height: 0;
+}
+
+.dropdown-option {
+  padding: 2px 43px 4px 11px;
+  display: block;
+  text-decoration: none;
+  color: #666;
+}
+
+.dropdown-option:hover {
+  background: #e9e9e9;
+}

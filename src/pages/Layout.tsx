@@ -7,7 +7,7 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <main className="m-width">
+      <main className="main">
         <Outlet />
       </main>
     </>
