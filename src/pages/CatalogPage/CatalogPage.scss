@@ -1,0 +1,15 @@
+.page-title {
+    margin-top: 0.5rem;
+  &>h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 0 17px;
+    color: #2c509a;
+    font-size: 32px;
+    font-weight: 500;
+    background: #fff;
+    padding: 0 10px 0 7px;
+    display: inline-block;
+  }
+}
+
