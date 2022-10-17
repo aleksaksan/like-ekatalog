@@ -1,5 +1,6 @@
 .page-title {
     margin-top: 0.5rem;
+
   &>h1 {
     position: relative;
     z-index: 1;
@@ -13,3 +14,31 @@
   }
 }
 
+.btn-togle-to-row-table {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  &>svg {
+    fill: #D3D3D3;
+  }
+  &:last-child {
+    margin-left: 6px;
+  }
+}
+
+.btn-togle-to-row-table:hover {
+  &>svg {
+    fill: gray;
+  }
+}
+
+.filters-row {
+  display: flex;
+  align-items: center;
+
+  &>hr {
+    flex-grow: 1;
+    margin: 0 6px;
+  }
+}

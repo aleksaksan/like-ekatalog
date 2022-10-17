@@ -7,6 +7,8 @@
   cursor: pointer;
   white-space: nowrap;
   width: 196px;
+  flex-shrink: 0;
+  margin-left: 6px;
 }
 
 .dropdown-selected-item {
