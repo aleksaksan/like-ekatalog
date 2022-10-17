@@ -16,6 +16,7 @@
   fill: $common-blue;
 }
 
+
 .custom-dot {
   background-color: #dbdbdb;
   cursor: pointer;
@@ -32,4 +33,10 @@
 
 .active>.custom-dot{
   background-color: $common-blue;
+}
+
+.f24-grey {
+  font-size: 24px;
+  font-weight: 400;
+  color: gray;
 }
