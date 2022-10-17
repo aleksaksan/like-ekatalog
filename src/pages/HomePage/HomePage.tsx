@@ -52,7 +52,7 @@ useEffect(()=> {
           <CategoriesGrid3 />
           <CategoriesGrid4 />
         </FlexibleSlider>
-        <h2>Популярное</h2>
+        <h2 className="f24-grey">Популярное</h2>
         <CentredItemsCard imageSrc='https://dummyjson.com/image/i/products/2/thumbnail.jpg' name='iphone' price='1000$' />
         <div>{categories.map(item=>item.name)}</div>
         <h1>{error}</h1>

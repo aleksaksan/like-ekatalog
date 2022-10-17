@@ -13,6 +13,8 @@ type DropdownMenuProps = {
 };
 
 
+
+
 export const DropdownMenu = (props: DropdownMenuProps) => {
   const [selectedItem, setSelectedItem] = useState(props.options[0]);
   const [isHidden, setIsHidden] = useState(true);
@@ -29,17 +31,21 @@ export const DropdownMenu = (props: DropdownMenuProps) => {
       ref={ref}
       onClick={()=>setIsHidden(!isHidden)}
     >
-      <div className="dropdown-selected-item">{selectedItem.name}</div>
+      <div className="dropdown-selected-item">
+        {selectedItem.name}
+        <div className={`dropdown-icon${!isHidden ? " turned" : ""}`}></div>
+      </div>
       <ul className={`dropdown-options-container${isHidden?" zero-height":""}`} >
-        {props.options.map(item=>(
+      {props.options.map(item=>(
         <li className="dropdown-option"
           key={item.id}
           onClick={()=>onItemClick(item)}
         >
           {item.name}
         </li>
-        ))}
+      ))}
       </ul>
+      
     </div>
   );
 };
