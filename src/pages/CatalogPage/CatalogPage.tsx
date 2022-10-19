@@ -16,7 +16,7 @@ const itemsName = "Catalog";
 
 
 export const CatalogPage = () => {
-  const [isByRows, setIsByRows] = useState(true);
+  const [isByRows, setIsByRows] = useState(false);
 
   return (
     <div>

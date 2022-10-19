@@ -33,6 +33,7 @@
     font-weight: 400;
     color: $common-blue;
     cursor: pointer;
+    text-decoration: none;
   }
 
   &>a:hover {
@@ -50,6 +51,7 @@
       color: #555;
       cursor: pointer;
       font-size: 1.2rem;
+      text-decoration: none;
     }
 
     a:hover {
@@ -71,6 +73,13 @@
 
   &.grid-card {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 15px;
+  }
+
+  &.grid-card:hover {
+    box-shadow: 0 0 13px 0 rgb(0 0 0 / 35%);
   }
 
   .thumbnail {

@@ -11,7 +11,7 @@ export type ItemsCardProps = {
 }
 
   //isByRow: boolean, //TODO => state manager
-  const isByRow = true;
+  const isByRow = false;
 
 export const ItemsCard = (props: ItemsCardProps) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -22,19 +22,19 @@ export const ItemsCard = (props: ItemsCardProps) => {
       <div className={`${isByRow ? "items-card row-card" : "items-card grid-card"}`}>
         <img className="thumbnail" alt={props.title} src="https://dummyjson.com/image/i/products/1/thumbnail.jpg"/>
         <div className="items-description">
-          <a>{props.title}</a>
+          <a href=''>{props.title}</a>
           <div className="tags-container">
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
-            <a>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
+            <a href=''>{props.brand}</a>
           </div>
           <div className="description">
             <label>Опиание:</label>

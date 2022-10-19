@@ -51,5 +51,10 @@
 
 .catalogs-container.flex-view {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
+  .items-card-wrapper {
+    width: 334px;
+  }
 }
