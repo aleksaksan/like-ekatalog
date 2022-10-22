@@ -1,24 +1,43 @@
+@import '../../styles/colors.scss';
+
 .page-title {
     margin-top: 0.5rem;
 
   &>h1 {
     position: relative;
     z-index: 1;
-    margin: 0 0 0 17px;
+    margin-right: 16px;
     color: #2c509a;
     font-size: 32px;
     font-weight: 500;
     background: #fff;
-    padding: 0 10px 0 7px;
+    padding-left: 15px;
     display: inline-block;
   }
+}
+
+.btn-togle {
+  display: flex;
+}
+
+.btn-togle-to-row-table.active {
+  &>svg {
+    fill: $common-blue;
+  }
+}
+
+.btn-togle-to-row-table:not(.active):hover {
+  &>svg {
+      fill: gray;
+      cursor: pointer;
+    }
 }
 
 .btn-togle-to-row-table {
   border: none;
   padding: 0;
   background-color: transparent;
-  cursor: pointer;
+
   &>svg {
     fill: #D3D3D3;
   }
@@ -27,18 +46,28 @@
   }
 }
 
-.btn-togle-to-row-table:hover {
-  &>svg {
-    fill: gray;
-  }
-}
-
 .filters-row {
   display: flex;
   align-items: center;
+  margin: 20px 0;
+  padding: 0 15px;
 
   &>hr {
     flex-grow: 1;
     margin: 0 6px;
+  }
+}
+
+.catalogs-container.flex-view {
+  display: flex;
+  flex-wrap: wrap;
+
+  .items-card-wrapper {
+    width: 250px;
+    height: 650px;
+
+    .items-card {
+      height: 650px;
+    }
   }
 }
