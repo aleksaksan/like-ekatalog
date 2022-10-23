@@ -16,6 +16,9 @@ const itemsName = "Catalog";
 
 export const CatalogPage = () => {
   const [isByRows, setIsByRows] = useState(true);
+  const [items, setItems] = useState(itemsMock);
+
+
 
   return (
     <div>
@@ -30,13 +33,13 @@ export const CatalogPage = () => {
 
         <div className="filters-row">
           <div>Выводить</div>
-          <DropdownMenu options={dropdownOptions} />
+          <DropdownMenu options={dropdownOptions} callback={setItems}/>
           <hr />
           <TogleButton callback={()=>{setIsByRows(!isByRows)}}/>
         </div>
 
         <div className={`catalogs-container${isByRows ? "" : " flex-view"}`}>
-          {itemsMock.map (item => 
+          {items.map (item => 
             <ItemsCard 
               key={item.id} 
               isByRow={isByRows}
