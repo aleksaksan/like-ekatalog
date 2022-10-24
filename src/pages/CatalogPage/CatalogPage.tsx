@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DropdownMenu, DropdownOption } from '../../components/DropdownMenu/DropdownMenu';
 import { ItemsCard } from '../../components/ItemsCard/ItemsCard';
+import { useSortedItems } from '../../hooks/useSortedItems';
 import './CatalogPage.scss';
 import { itemsMock } from './itemsMock';
 import { TogleButton } from './TogleButton/TogleButton';
@@ -16,6 +17,9 @@ const itemsName = "Catalog";
 
 export const CatalogPage = () => {
   const [isByRows, setIsByRows] = useState(true);
+  const [sortOption, setSortOption] = useState(dropdownOptions[0]);
+
+  const sortedItems = useSortedItems(itemsMock, sortOption.id)
 
   return (
     <div>
@@ -30,13 +34,13 @@ export const CatalogPage = () => {
 
         <div className="filters-row">
           <div>Выводить</div>
-          <DropdownMenu options={dropdownOptions} />
+          <DropdownMenu options={dropdownOptions} callback={setSortOption}/>
           <hr />
           <TogleButton callback={()=>{setIsByRows(!isByRows)}}/>
         </div>
 
         <div className={`catalogs-container${isByRows ? "" : " flex-view"}`}>
-          {itemsMock.map (item => 
+          {sortedItems.map (item => 
             <ItemsCard 
               key={item.id} 
               isByRow={isByRows}

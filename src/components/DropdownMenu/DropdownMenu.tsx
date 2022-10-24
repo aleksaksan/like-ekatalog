@@ -9,7 +9,7 @@ export type DropdownOption = {
 
 type DropdownMenuProps = {
   options: DropdownOption[];
-  callback?: (item: any) => void;
+  callback?: (item: DropdownOption) => void;
 };
 
 
